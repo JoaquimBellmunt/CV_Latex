@@ -1,5 +1,13 @@
 \documentclass[paper=a4,fontsize=11pt]{temp} % KOMA-article 
 \usepackage{array}
+\usepackage[%
+  colorlinks=true,%
+  urlcolor=blue%
+]{hyperref}
+\newcommand{\at}{\makeatletter @\makeatother}
+\usepackage{color}
+\definecolor{redCV}{RGB}{88,24,37}
+
 
 \begin{document}
 \sepspace
@@ -17,11 +25,14 @@
    \setlength{\tabcolsep}{12pt}
    \begin{tabular}{>{\centering\arraybackslash}p{.55\textwidth}} \centering \small \textit{Interested in technological innovations that respond to societal demands.\\Pervasive Computation, Internet of Things, and Cloud Computing.} \end{tabular}
    & \setlength{\tabcolsep}{5pt} \begin{tabular}{@{}cl@{}}
+    \includegraphics[height=2ex]{IMG/icons/map5}  & Singapore\\
     \includegraphics[height=2ex]{IMG/icons/profile} & Barcelona, Oct 15th 1987  \\
-    \includegraphics[height=2ex]{IMG/icons/mail9} & joaquim.bell@gmail.com  \\
-    \includegraphics[height=2ex]{IMG/icons/telephone1} &(+65) 81193783 \\    
+    \includegraphics[height=2ex]{IMG/icons/mail9} & \href{mailto:joaquim.bell@gmail.com}{joaquim.bell@gmail.com} \\
+    \includegraphics[height=2ex]{IMG/icons/telephone1} &(+65) 81193783 \\  
     \includegraphics[height=2ex]{IMG/icons/social6}  &  quimbell\\    
-    \includegraphics[height=2ex]{IMG/icons/map5}  & Singapore   
+    \includegraphics[height=2ex]{IMG/icons/social22}  &  \href{https://es.linkedin.com/in/joaquimbellmunt
+}{joaquimbellmunt}  
+       
    \end{tabular}
  \end{tabular}
    %\hfill yourwebsite.com
@@ -62,22 +73,22 @@
 \noindent
 
 
-\EducationEntry{Phd. at IPAL}{Jul 2014 - Today}{Computer Science Ph.D. at IPAL, University of Montpelier, France}{Institut Mines-télécom French Ph.D. based on Singapore} {IMG/imt}
+\EducationEntry{Phd. at IPAL}{Jul 2014 - Today}{Computer Science Ph.D. at IPAL, University of Montpelier, France}{Institut Mines-télécom, French Ph.D. in Singapore at IPAL (CNRS UMI)} {IMG/imt}
 
 \sepspace
 
 
-\EducationEntry{ICT for Health Specialisation}{Sep 2012 - Sep 2013}{Institut Mines-Télécom, Université Montpellier, École des Mines d'Alès, Montpelier, France}{Bachelor and Master Degree with specialty in Communications.\\9.5/10 qualification for my Thesis, average grade of 7.33/10, order 33/144 and efficiency of 0.94.} {IMG/imt}
+\EducationEntry{ICT for Health Specialisation}{Sep 2012 - Sep 2013}{Institut Mines-Télécom, Université Montpellier, École des Mines d'Alès, Montpelier, France}{Master Degree with specialty in Information and Technology.} {IMG/imt}
 
 \sepspace
 
 
-\EducationEntry{MSc. Telecommunications Engineering}{Feb 2012 - Sep 2013}{ENS Telecom Bretagne, Brest, France}{Double Master Degree program.} {IMG/brest}
+\EducationEntry{MSc. Telecommunications Engineering}{Feb 2012 - Sep 2013}{ENS Telecom Bretagne, Brest, France}{Double Master Degree program in Telecommunications Engineering.} {IMG/brest}
 
 \sepspace
 
 
-\EducationEntry{BSc and MSc. Telecommunications Engineering}{Sep 2005 - Jan 2012}{TelecomBCN (ETSETB, UPC Barcelona Tech), Spain}{Bachelor and Master Degree in Telecommunications.} {IMG/logo_telecom_S}
+\EducationEntry{BSc and MSc. Telecommunications Engineering}{Sep 2005 - Jan 2012}{TelecomBCN (ETSETB, UPC Barcelona Tech), Spain}{Bachelor and Master Degree in Telecommunications Engineering.} {IMG/logo_telecom_S}
 
 
 %\sepspace
@@ -143,7 +154,8 @@ Volleyball.
    \begin{minipage}{0.88\linewidth}
    %\noindent\hangindent=2em\hangafter=1 
    
-   \textbf{PUBLICATIONS}
+   \textbf{\textcolor{redCV}{PUBLICATIONS}}
+   \vspace{1ex}
     
     - \textbf{Bellmunt, J.}, Tiberghien, T., Mokhtari, M., Aloulou, H., \& Endelin, R. (2015, Jun). Technical Challenges Towardsan AAL Large Scale Deployment. In International Conference on Smart Homes and Health Telematics (pp.3-14). Springer International Publishing. \textbf{Published}\\
     
@@ -160,7 +172,8 @@ Volleyball.
     - Aloulou, H., Abdulrazak, B., Endelin, R., Kadachi, F., \& \textbf{Bellmunt, J.}. (2017). Activity Recognition Enhancement Based on Groundtruth: Introducing Accuracy and Granularity Metrics. IEEE
 International Conference on Pervasive Computing and Communications. \textbf{Submitted}.\\
 
-\textbf{COURSES}
+\textbf{\textcolor{redCV}{COURSES}}
+\vspace{1ex}
 
 - Semantic Web Summer School 2015, Bertinoro, Italy.\\
 - Coursera, Machine Learning, Andrew Ng (https://www.coursera.org/course/ml) \\
@@ -185,11 +198,11 @@ International Conference on Pervasive Computing and Communications. \textbf{Subm
 \NewPart{Referees}{}
 \hspace{3mm}
 \begin{minipage}[t]{0.45\textwidth}
-\RefereeEntry{Prof. Mounir Mokhtari}{}{Ph.D. director \\ IPAL Director \\ Professor at Institut Mines-Télécom\\mounir.mokhatri@iipal.cnrs.fr} {pics/mounir}
+\RefereeEntry{Prof. Mounir Mokhtari}{}{Ph.D. director \\ IPAL Director \\ Professor at Institut Mines-Télécom\\ \underline{mounir.mokhtari@ipal.cnrs.fr}} {pics/mounir}
 \end{minipage}
 \hspace{0.02\textwidth}
 \begin{minipage}[t]{0.45\textwidth}
-\RefereeEntry{Prof. Bessam Abdulzarak}{}{Ph.D. Advisor\\ IPAL collaborator\\ Professor at University of Sherbrooke\\bessam.abdulrazak@usherbrooke.ca} {pics/Bessam}
+\RefereeEntry{Prof. Bessam Abdulzarak}{}{Ph.D. Advisor\\ IPAL collaborator\\ Professor at University of Sherbrooke\\ \underline{bessam.abdulrazak@usherbrooke.ca}} {pics/Bessam}
 \end{minipage}
  \sepspace
  
