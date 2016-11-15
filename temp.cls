@@ -30,8 +30,8 @@
 % Color definitions
 \definecolor{date}{HTML}{666666} 
 \definecolor{primary}{HTML}{191919} 
-\definecolor{headings}{HTML}{455818}%{025178}
-\definecolor{subheadings}{HTML}{581825}%{002648}085943
+\definecolor{headings}{HTML}{025178}%{455818}
+\definecolor{subheadings}{HTML}{002648}%{581825}085943
 
 
 %%% Custom sectioning (sectsty package)
@@ -147,6 +147,27 @@
         \end{minipage}        
  }
  
+ \newcommand{\AwardEntryLong}[5]{		
+%place, time, position, description, logo
+        \begin{minipage}{0.03\linewidth}
+                \hspace{\linewidth}
+		\end{minipage}%  
+    	\begin{minipage}{0.06\linewidth}
+        \centering
+ 		\includegraphics[width=\linewidth, height=4.5ex,keepaspectratio] {#5}
+		\end{minipage}%    
+        \begin{minipage}{0.02\linewidth}
+        \hspace{\linewidth}
+		\end{minipage}%  
+        \begin{minipage}{0.81\linewidth}  
+    	\noindent {\color{subheadings}\bfseries\uppercase {#1}}, {\color{subheadings}\textit{#3}}  
+        \hfill  {\color{headings}\fontsize{10pt}{12pt}#2}   
+        \par   	
+        \noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par         
+        \end{minipage}         
+}
+
  \newcommand{\RefereeEntry}[4]{     
     	\begin{minipage}{0.18\linewidth}
         \centering
@@ -162,7 +183,28 @@
 		\normalsize \par         
         \end{minipage}        
  }
+
+  \newcommand{\RefereeEntryB}[4]{     
+    	\begin{minipage}{0.2\linewidth}
+        \centering
+ 		\includegraphics[width=1.4cm, height=10ex,keepaspectratio] {#4}
+		\end{minipage}%         
+        \hfill 
+        \begin{minipage}{0.79\linewidth}  
+    	\noindent {\color{subheadings}\bfseries\uppercase {#1}}       
+        \par   	
+		\noindent {\color{subheadings}\textit{#2}} 
+		\par   	
+		%\noindent {\color{subheadings}\textit{#3}} \par 
+        \noindent\hangindent=2em\hangafter=0 \small #3 % Description
+		\normalsize \par         
+        \end{minipage}        
+ }
  
+  \newcommand{\PublicationEntry}[6]{     
+  %{authors}{title}{conf/journal}{publisher}{year}{comments?}
+    	- {#1} ``{#2},'' in \textit{#3}. {#4}, {#5}. {#6}        
+ }
  
 \newcommand{\flag}[1]{
 	\includegraphics[height=9pt, width= 15pt]{#1}
