@@ -28,17 +28,26 @@
 \pagestyle{empty}           % No pagenumbers/headers/footers
 
 % Color definitions
-\definecolor{date}{HTML}{666666} 
-\definecolor{primary}{HTML}{191919} 
-\definecolor{headings}{HTML}{025178}%{455818}
-\definecolor{subheadings}{HTML}{002648}%{581825}085943
+%\definecolor{date}{HTML}{666666} 
+%\definecolor{primary}{HTML}{191919} 
+%\definecolor{headings}{HTML}{025178}%{455818}
+%\definecolor{subheadings}{HTML}{002648}%{581825}085943
+
+\definecolor{date}{HTML}{24528B} 
+\definecolor{name}{HTML}{24528B} 
+\definecolor{primary}{HTML}{24528B} 
+\definecolor{headings}{HTML}{24528B}%{455818}
+\definecolor{subheadings}{HTML}{24528B}%{581825}085943
+
+\definecolor{complementarysubheadings}{HTML}{9b4303}
 
 
 %%% Custom sectioning (sectsty package)
 %%% ------------------------------------------------------------
 \usepackage{sectsty}
 
-\sectionfont{\usefont{OT1}{phv}{b}{n}\sectionrule{0pt}{0pt}{-5pt}{3pt}}
+%\sectionfont{\usefont{OT1}{phv}{b}{n}\sectionrule{0pt}{0pt}{-5pt}{3pt}}
+\sectionfont{\usefont{OT1}{phv}{b}{n}\sectionrule{0pt}{0pt}{-5pt}{1pt}}
 \subsectionfont{\color{headings}\usefont{OT1}{phv}{b}{n}}
 \subsubsectionfont{\sectionrule{0pt}{0pt}{-5pt}{3pt}}
 %%% Macros
@@ -48,7 +57,7 @@
 \newcommand{\sepspace}{\vspace*{1em}}		% Vertical space macro
 
 \newcommand{\MyName}[1]{ % Name 
-		 \huge \usefont{OT1}{phv}{b}{n} \hfill \textcolor{headings}{#1}
+		 \huge \usefont{OT1}{phv}{b}{n} \hfill \textcolor{name}{#1}
 		\par \normalsize \normalfont}
 
 
@@ -73,12 +82,12 @@
         \centering
  		\includegraphics[width=\linewidth, height=7ex,keepaspectratio] {#5}
 		\end{minipage}%    
-        \begin{minipage}{0.024\linewidth}
+        \begin{minipage}{0\linewidth}
         \hspace{\linewidth}
 		\end{minipage}%  
         \begin{minipage}{0.84\linewidth}  
-    	\noindent {\color{subheadings}\bfseries\uppercase {#1}}, {\color{subheadings}\textit{#3}}  
-        \hfill  {\color{headings}\fontsize{10pt}{12pt}#2}   
+    	\noindent {\color{complementarysubheadings}\bfseries\uppercase {#1}}, {\color{complementarysubheadings}\textit{#3}}  
+        \hfill  {\color{complementarysubheadings}\fontsize{10pt}{12pt}#2}   
         \par   	
         \noindent\hangindent=2em\hangafter=0 \small #4 % Description
 		\normalsize \par         
@@ -94,9 +103,9 @@
         \begin{minipage}{0.02\linewidth}
         \hspace{\linewidth}
 		\end{minipage}%  
-        \begin{minipage}{0.84\linewidth}  
+        \begin{minipage}{0.9\linewidth}  
     	\noindent {\color{subheadings}\bfseries\uppercase {#1}}, {\color{subheadings}\textit{#3}}  
-        \hfill  {\color{headings}\fontsize{10pt}{12pt}#2}   
+        \hfill  {\color{date}\fontsize{10pt}{12pt}#2}   
         \par   	
         \noindent\hangindent=2em\hangafter=0 \small #4 % Description
 		\normalsize \par         
@@ -123,7 +132,7 @@
 		\end{minipage}%                    
         \begin{minipage}{0.84\linewidth}  
     	\noindent {\color{subheadings}\bfseries\uppercase {#1}} 
-        \hfill {\color{headings}\fontsize{10pt}{12pt}#2}
+        \hfill {\color{subheadings}\fontsize{10pt}{12pt}#2}
 		\par   	
 		\noindent {\color{subheadings}\textit{#3}} \par 
         \noindent\hangindent=2em\hangafter=0 \small #4 % Description
@@ -215,5 +224,5 @@
 }  
 
 \newcommand{\softwareb}[1]{
-	\raisebox{-.6\height}{\includegraphics[height=18pt]{#1}}
+	\raisebox{-0.3\height}{\includegraphics[height=18pt]{#1}}
 }
